@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light theme colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Dark theme colors -->
+    <color name="purple_dark">#8F57FF</color>
+    <color name="purple_dark_700">#7243D9</color>
+    <color name="teal_dark">#66D4C6</color>
+    <color name="dark_background">#121212</color>
+    <color name="dark_surface">#2D2D2D</color>
+    
+    <!-- New header colors -->
+    <color name="header_color_light">#2C2C2C</color>
+    <color name="header_color_dark">#1A1A1A</color>
+    <color name="header_color_accent">#3B3B3B</color>
+    
+    <!-- Button colors -->
+    <color name="button_on">#4CAF50</color>
+    <color name="button_off">#F44336</color>
+    <color name="button_on_muted">#1B5E20</color>
+    <color name="button_off_muted">#7F0000</color>
+    
+    <!-- Slider colors -->
+    <color name="slider_thumb_light">#2C2C2C</color>
+    <color name="slider_track_light">#CCCCCC</color>
+    <color name="slider_progress_light">#666666</color>
+    <color name="slider_thumb_light_disabled">#999999</color>
+    <color name="slider_track_light_disabled">#DDDDDD</color>
+    <color name="slider_progress_light_disabled">#BBBBBB</color>
+    
+    <color name="slider_thumb_dark">#FFFFFF</color>
+    <color name="slider_track_dark">#555555</color>
+    <color name="slider_progress_dark">#CCCCCC</color>
+    <color name="slider_thumb_dark_disabled">#555555</color>
+    <color name="slider_track_dark_disabled">#333333</color>
+    <color name="slider_progress_dark_disabled">#444444</color>
+    
+    <!-- Text colors -->
+    <color name="light_text_primary">#DE000000</color> <!-- 87% opacity -->
+    <color name="light_text_secondary">#99000000</color> <!-- 60% opacity -->
+    <color name="dark_text_primary">#FFFFFF</color>
+    <color name="dark_text_secondary">#B3FFFFFF</color> <!-- 70% opacity -->
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Home Audio Gem</string>
+    <string name="home_audio_control">Home Audio Control</string>
+    <string name="action_go">Go</string>
+    <string name="baking_title">Baking with Gemini</string>
+    <string name="label_prompt">Prompt</string>
+    <string name="prompt_placeholder">Provide a recipe for the baked goods in the image</string>
+    <string name="image1_description">Cupcake</string>
+    <string name="image2_description">Cookies</string>
+    <string name="image3_description">Cake</string>
+    <string name="results_placeholder">(Results will appear here)</string>
+    
+    <!-- Error messages -->
+    <string name="error_loading_zones">Error loading zones</string>
+    <string name="error_no_zones">No zones found</string>
+    <string name="error_updating_zone">Error updating zone</string>
+    <string name="error_turning_off">Error turning off zones</string>
+    <string name="error_saving_settings">Error saving settings</string>
+    
+    <!-- Success messages -->
+    <string name="settings_saved">Settings saved successfully</string>
+    <string name="amp_count_saved">Amplifier count saved successfully</string>
+    
+    <!-- Button labels -->
+    <string name="control_all">Control All Zones</string>
+    <string name="all_off">All Zones Off</string>
+    <string name="power_on">POWER ON</string>
+    <string name="power_off">POWER OFF</string>
+    <string name="mute">MUTE</string>
+    <string name="unmute">UNMUTE</string>
+    <string name="save">Save</string>
+    <string name="save_settings">Save Settings</string>
+    
+    <!-- Settings -->
+    <string name="server_url">Server URL</string>
+    <string name="amp_count">Number of Amplifiers</string>
+    
+    <!-- Control labels -->
+    <string name="volume">Volume: %1$d</string>
+    <string name="treble">Treble: %1$d</string>
+    <string name="bass">Bass: %1$d</string>
+    <string name="source">Source:</string>
+    
+    <!-- Theme settings -->
+    <string name="theme_title">App Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_preference_key">app_theme</string>
+</resources>

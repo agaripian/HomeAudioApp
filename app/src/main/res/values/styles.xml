@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom SeekBar style for light theme -->
+    <style name="CustomSeekBarStyle">
+        <item name="android:progressBackgroundTint">@color/slider_track_light</item>
+        <item name="android:progressTint">@color/slider_progress_light</item>
+        <item name="android:thumbTint">@color/slider_thumb_light</item>
+        <item name="android:minHeight">26dp</item>
+        <item name="android:maxHeight">26dp</item>
+    </style>
+    
+    <!-- Style for disabled SeekBar states in light theme -->
+    <style name="DisabledSeekBarStyle">
+        <item name="android:progressBackgroundTint">@color/slider_track_light_disabled</item>
+        <item name="android:progressTint">@color/slider_progress_light_disabled</item>
+        <item name="android:thumbTint">@color/slider_thumb_light_disabled</item>
+        <item name="android:minHeight">26dp</item>
+        <item name="android:maxHeight">26dp</item>
+        <item name="android:enabled">false</item>
+    </style>
+</resources> 

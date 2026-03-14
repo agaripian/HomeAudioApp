@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="3dp"
+    android:layout_marginVertical="2dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Compact layout with zone name, power button and volume in a single row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp">
+
+            <!-- Expand/collapse button (moved to left) -->
+            <ImageButton
+                android:id="@+id/btnExpandCollapse"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Expand/Collapse"
+                android:src="@drawable/ic_expand"
+                android:scaleType="fitCenter"
+                android:padding="0dp"
+                android:layout_marginEnd="5dp" />
+
+            <!-- Zone name and volume stacked -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Zone name (non-editable) -->
+                <TextView
+                    android:id="@+id/txtZoneName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Zone Name" />
+
+                <!-- Volume row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="1dp">
+
+                    <TextView
+                        android:id="@+id/txtVolume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vol: 15"
+                        android:textSize="13sp" />
+
+                    <!-- Volume slider with increased hit area -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_marginStart="5dp">
+
+                        <SeekBar
+                            android:id="@+id/seekVolume"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="30"
+                            android:progress="15"
+                            android:minHeight="26dp"
+                            android:thumbOffset="0dp"
+                            style="@style/CustomSeekBarStyle" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Power button (moved to right) -->
+            <ImageButton
+                android:id="@+id/btnPower"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/button_off_background"
+                android:contentDescription="Power"
+                android:src="@android:drawable/ic_lock_power_off"
+                android:scaleType="center"
+                android:tint="@android:color/white"
+                android:padding="0dp"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <!-- Expandable advanced controls -->
+        <LinearLayout
+            android:id="@+id/expandableControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="6dp"
+            android:visibility="gone">
+            
+            <!-- Editable zone name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="13sp" />
+                
+                <EditText
+                    android:id="@+id/editZoneName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="Zone Name"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:background="@null"
+                    android:padding="6dp"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Source:"
+                    android:textSize="13sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtTreble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Treb: 7"
+                        android:textSize="13sp" />
+
+                    <!-- Treble slider with increased hit area -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_marginStart="5dp">
+
+                        <SeekBar
+                            android:id="@+id/seekTreble"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="14"
+                            android:progress="7"
+                            android:minHeight="26dp"
+                            android:thumbOffset="0dp"
+                            style="@style/CustomSeekBarStyle" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/txtBass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bass: 7"
+                        android:textSize="13sp" />
+
+                    <!-- Bass slider with increased hit area -->
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_marginStart="5dp">
+
+                        <SeekBar
+                            android:id="@+id/seekBass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="14"
+                            android:progress="7"
+                            android:minHeight="26dp"
+                            android:thumbOffset="0dp"
+                            style="@style/CustomSeekBarStyle" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView> 

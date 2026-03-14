@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.HomeAudioGem" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color - now using dark header -->
+        <item name="colorPrimary">@color/header_color_light</item>
+        <item name="colorPrimaryDark">@color/header_color_dark</item>
+        <item name="colorAccent">@color/header_color_accent</item>
+        
+        <!-- Light theme background colors -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/light_text_primary</item>
+        <item name="android:textColorSecondary">@color/light_text_secondary</item>
+        
+        <!-- Status bar handling -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

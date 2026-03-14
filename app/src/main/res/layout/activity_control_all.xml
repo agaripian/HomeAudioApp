@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ControlAllActivity">
+
+    <!-- Status bar spacer -->
+    <View
+        android:id="@+id/statusBarSpacer"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toBottomOf="@id/statusBarSpacer"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:contentInsetStartWithNavigation="0dp">
+        
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Control All Zones"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnPower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="POWER ON ALL ZONES"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Volume: 15"
+                android:textSize="16sp" />
+
+            <!-- Volume slider with improved hit area -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="8dp">
+                
+                <SeekBar
+                    android:id="@+id/seekVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="30"
+                    android:progress="15"
+                    android:minHeight="26dp"
+                    android:thumbOffset="0dp"
+                    style="@style/CustomSeekBarStyle" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Source:"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinnerSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/txtTreble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Treble: 7"
+                android:textSize="16sp" />
+
+            <!-- Treble slider with improved hit area -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="8dp">
+                
+                <SeekBar
+                    android:id="@+id/seekTreble"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="14"
+                    android:progress="7"
+                    android:minHeight="26dp"
+                    android:thumbOffset="0dp"
+                    style="@style/CustomSeekBarStyle" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtBass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Bass: 7"
+                android:textSize="16sp" />
+
+            <!-- Bass slider with improved hit area -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="8dp">
+                
+                <SeekBar
+                    android:id="@+id/seekBass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="14"
+                    android:progress="7"
+                    android:minHeight="26dp"
+                    android:thumbOffset="0dp"
+                    style="@style/CustomSeekBarStyle" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnMute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="MUTE ALL ZONES"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#80FF0000"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Error message"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout> 
